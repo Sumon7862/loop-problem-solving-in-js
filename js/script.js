@@ -98,6 +98,27 @@ function reverseNumber() {
     document.getElementById("revResult").innerText = reversed;
 }
 
+// JavaScript function for reverses a number.
+function countDigits() {
+    let num = Number(document.getElementById("digitNum").value);
+
+    if (isNaN(num)) {
+        document.getElementById("digitResult").innerText = "Invalid input";
+        return;
+    }
+
+    let count = 0;
+    let temp = Math.abs(num);
+
+    if (temp === 0) count = 1;
+
+    while (temp > 0) {
+        temp = Math.floor(temp / 10);
+        count++;
+    }
+
+    document.getElementById("digitResult").innerText = count;
+}
 
 
 
