@@ -57,5 +57,23 @@ function sumOneToHundred() {
     document.getElementById("sumResult").innerText = sum;
 }
 
+// JavaScript function for finds factorial of a number.
+function findFactorial() {
+    let num = Number(document.getElementById("factNum").value);
+
+    if (isNaN(num) || num < 0) {
+        document.getElementById("factResult").innerText = "Invalid input";
+        return;
+    }
+
+    let fact = 1;
+
+    for (let i = 1; i <= num; i++) {
+        fact *= i;
+    }
+
+    document.getElementById("factResult").innerText = fact;
+}
+
 
 
