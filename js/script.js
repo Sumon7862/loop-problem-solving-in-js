@@ -75,5 +75,29 @@ function findFactorial() {
     document.getElementById("factResult").innerText = fact;
 }
 
+// JavaScript function for reverses a number.
+function reverseNumber() {
+    let num = Number(document.getElementById("revNum").value);
+
+    if (isNaN(num)) {
+        document.getElementById("revResult").innerText = "Invalid input";
+        return;
+    }
+
+    let reversed = 0;
+    let temp = Math.abs(num);
+
+    while (temp > 0) {
+        reversed = (reversed * 10) + (temp % 10);
+        temp = Math.floor(temp / 10);
+    }
+
+    // handle negative numbers
+    if (num < 0) reversed = -reversed;
+
+    document.getElementById("revResult").innerText = reversed;
+}
+
+
 
 
