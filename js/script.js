@@ -120,5 +120,25 @@ function countDigits() {
     document.getElementById("digitResult").innerText = count;
 }
 
+// JavaScript function for prints Fibonacci series up to n terms.
+function printFibonacci() {
+    let n = Number(document.getElementById("fibNum").value);
+
+    if (isNaN(n) || n <= 0) {
+        document.getElementById("fibResult").innerText = "Invalid input";
+        return;
+    }
+
+    let fib = [];
+    for (let i = 0; i < n; i++) {
+        if (i === 0) fib.push(0);
+        else if (i === 1) fib.push(1);
+        else fib.push(fib[i-1] + fib[i-2]);
+    }
+
+    document.getElementById("fibResult").innerText = fib.join(" ");
+}
+
+
 
 
